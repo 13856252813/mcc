@@ -67,6 +67,9 @@ public class VideoActivity extends BaseActivity implements SystemKandy.KandyCall
     private ShowRemoteDialog mRemoteDialog;
 
 
+    private String departmentId="5a700c1fb5f488243d6e5048";
+//    private String departmentId="591031d9c842ab120d98b49c";
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -161,7 +164,7 @@ public class VideoActivity extends BaseActivity implements SystemKandy.KandyCall
         request.setCompanyId("txtechnology");
         request.setUserId(userId);
         request.setType("video");
-        request.setDepartment("591031d9c842ab120d98b49c");
+        request.setDepartment(departmentId);
         request.setDeviceType("android");
         request.setChannelType("android");
         request.setUserInfo(bean);

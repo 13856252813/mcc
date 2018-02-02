@@ -3,9 +3,7 @@ package com.tx.mcc.activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -31,9 +29,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
         mBtnCustomer = (Button) findViewById(R.id.btn_customer);
         mBtnCustomer.setOnClickListener(this);
-
-        Log.e("fl","-----bool:"+(ContextCompat.checkSelfPermission(MainActivity.this,
-                android.Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED ));
         getSystem(SystemKandySetting.class).setResolution(false, new SystemKandySetting.BaseCallBack() {
             @Override
             public void onFail() {
@@ -53,7 +48,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         getSystem(SystemHttpRequest.class).getKandyAccount(new HttpRequestClient.RequestHttpCallBack() {
             @Override
             public void onSuccess(String json) {
-                Log.e("fl", "----getKandyAccount:" + json + "-------thead:");
                 try {
                     JSONObject object = new JSONObject(json);
                     String userName = object.optString("username");
