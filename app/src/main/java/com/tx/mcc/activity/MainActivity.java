@@ -50,6 +50,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             public void onSuccess(String json) {
                 try {
                     JSONObject object = new JSONObject(json);
+                    Log.e("fl", "getKandyAccount:"+json);
                     String userName = object.optString("username");
                     String password = object.optString("password");
                     userLogin(userName, password);

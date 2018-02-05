@@ -15,10 +15,10 @@ import com.txt.library.base.SystemBase;
 
 public class SystemHttpRequest extends SystemBase {
 
-//    public String IP="192.168.1.65";
-//    public String port="60221";
-    public String IP="shuzu.ikandy.cn";
-    public String port="60800";
+    public String IP="192.168.1.65";
+    public String port="60221";
+//    public String IP="shuzu.ikandy.cn";
+//    public String port="60800";
 
     private  String TAG=SystemHttpRequest.class.getSimpleName();
 

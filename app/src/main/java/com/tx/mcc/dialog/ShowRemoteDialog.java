@@ -9,6 +9,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.genband.kandy.api.services.calls.KandyView;
@@ -19,9 +20,12 @@ import com.tx.mcc.R;
  */
 public class ShowRemoteDialog extends Dialog {
     private final static String TAG=ShowRemoteDialog.class.getSimpleName();
+    public ImageView mGuidView;
     public KandyView mRemoteView;
     public RelativeLayout mRootKandyView;
     public View mRootview;
+    public RelativeLayout mHangupButton,mAudioMute,mCamerSwitch,mTakeKandyVieewPicture;
+    public ImageView mLightImg;
     public ShowRemoteDialog(@NonNull Context context) {
         super(context, R.style.remote_dialog_style);
         setCanceledOnTouchOutside(false);
@@ -40,8 +44,18 @@ public class ShowRemoteDialog extends Dialog {
     }
 
     private void initView() {
+        mLightImg= (ImageView)mRootview.findViewById(R.id.light);
         mRemoteView= (KandyView)mRootview.findViewById(R.id.remotedialogview);
         mRootKandyView= (RelativeLayout)mRootview.findViewById(R.id.dialog_root);
+        mHangupButton= (RelativeLayout)mRootview.findViewById(R.id.hangup);
+        mAudioMute= (RelativeLayout)mRootview.findViewById(R.id.pic_nute);
+        mTakeKandyVieewPicture= (RelativeLayout)mRootview.findViewById(R.id.takepicture);
+        mCamerSwitch= (RelativeLayout)mRootview.findViewById(R.id.cameraswitch);
+        mAudioMute.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
     }
 
     public void hideKandyView(){
@@ -59,4 +73,5 @@ public class ShowRemoteDialog extends Dialog {
     public boolean onTouchEvent(@NonNull MotionEvent event) {
         return super.onTouchEvent(event);
     }
+
 }

@@ -45,12 +45,12 @@ public class SystemKandy extends SystemBase implements KandyCallServiceNotificat
     private final static String TAG="SystemKandy";
     private String KEY_VERSION = "version";
 
-//    private String API_KEY="DAK9d52eeb8475d48f5aa7d05f796a2f697";
-//    private String API_SECRET="DAS86c13043ce3e42349e8ba0f213a107d8";
+    private String API_KEY="DAK9d52eeb8475d48f5aa7d05f796a2f697";
+    private String API_SECRET="DAS86c13043ce3e42349e8ba0f213a107d8";
 
-    //shuzu
-    private String API_KEY="DAK26ae7cb662b24f509ec14e179067e343";
-    private String API_SECRET="DAS11894478cfc14b2483e5847ed5fbdb8e";
+//    //shuzu
+//    private String API_KEY="DAK26ae7cb662b24f509ec14e179067e343";
+//    private String API_SECRET="DAS11894478cfc14b2483e5847ed5fbdb8e";
     private boolean isCurrentStateTalking=false;
     public String mAgentCall;
     public  boolean isLogin=false;

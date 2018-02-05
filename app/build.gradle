@@ -6,7 +6,7 @@ android {
     defaultConfig {
         applicationId "com.tx.mcc"
         minSdkVersion 19
-        targetSdkVersion 25
+        targetSdkVersion 21
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -32,4 +32,7 @@ dependencies {
     compile 'com.squareup.okio:okio:1.7.0'
     compile 'com.squareup.okhttp3:okhttp:3.2.0'
     testCompile 'junit:junit:4.12'
+
+
+
 }
