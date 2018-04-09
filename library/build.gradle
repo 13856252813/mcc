@@ -5,8 +5,8 @@ android {
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        minSdkVersion 9
         targetSdkVersion 25
+        minSdkVersion 19
         versionCode 1
         versionName "1.0"
 
@@ -35,6 +35,10 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.squareup.okio:okio:1.7.0'
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.google.code.gson:gson:2.6.2'
     testCompile 'junit:junit:4.12'
     compile files('libs/kandy-1.8.49.jar')
 }

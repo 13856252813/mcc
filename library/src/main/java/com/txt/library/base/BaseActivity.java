@@ -1,21 +1,18 @@
 package com.txt.library.base;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 
-import com.txt.library.util.NetUtil;
+import com.txt.library.utils.NetUtil;
+
 
 /**
  * Created by DELL on 2017/4/16.
@@ -102,10 +99,10 @@ public abstract class  BaseActivity extends Activity {
     }
 
     //网络状态更改为wifi状态
-    public abstract void changeWifi();
+    public  void changeWifi(){}
     //网络状态更改为移动数据
-    public abstract void changeMobile();
+    public  void changeMobile(){}
     //网络状态更改为没有网络
-    public abstract void changeNetNull();
+    public  void changeNetNull(){}
 
 }
